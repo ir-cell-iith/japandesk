@@ -34,6 +34,61 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
+	<style>
+.language-toggle-wrapper {
+  position: relative; /* Parent to anchor absolute child */
+  min-height: 60px; /* Ensure space for button */
+}
+
+.language-toggle-btn-container {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 20;
+  /* Responsive fallback for smaller screens */
+}
+@media (max-width: 700px) {
+  .language-toggle-btn-container {
+    position: static;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    right: auto;
+    top: auto;
+  }
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 0.47em 1.5em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #232323;
+  background: #fff;
+  border: 2px solid #dadada;
+  border-radius: 2em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(30,30,40,0.04);
+  transition:
+    background 0.18s,
+    color 0.18s,
+    border 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+.toggle-btn:focus,
+.toggle-btn:hover {
+  background: #f6f6f9;
+  color: #3182ce;
+  border-color: #c2c2c2;
+  box-shadow: 0 4px 18px 0 rgba(30,100,200,0.07);
+}
+.toggle-btn:active {
+  background: #3182ce;
+  color: #fff;
+  border-color: #3182ce;
+}
+</style>
 </head>
 
 <body>
@@ -304,6 +359,12 @@
 
 <!-- Page Content -->
 <div class="page-content">
+	    <div class="language-toggle-section">
+<div style="display: flex; justify-content: flex-end; align-items: flex-start; margin-top: 32px;">
+  <button id="language-toggle-btn" class="toggle-btn">日本語 / English</button>
+</div>
+
+    <div id="section-en" class="lang-section lang-en">
     <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
@@ -322,6 +383,11 @@ research collaborators under the JICA FRIENDSHIP2.0 project. India was the first
 visited abroad—she even had to get a passport for the first time. During her stay, she experienced
 cutting-edge research, adapted to a new environment, and grew while immersed in a multicultural
 setting.</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_1.jpeg" alt="Ms. Yahagi at the main gate."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>At the main gate of IITH</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">Research Experience in a Different Culture</h5>
 <p class="text-justify">
@@ -364,6 +430,11 @@ mindset helped her overcome these differences.</p>
 <p class="text-justify">Despite the challenges, she found joy in cultural exchange—playing table tennis and badminton with
 Indian students at the on-campus gym near her dormitory, or striking up conversations with Indian
 students she happened to sit next to in the cafeteria.</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_2.jpg" alt="Ms. Yahagi with other lab members."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With my lab members</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">A Challenge and Growth Through English</h5>
                         <p class="text-justify">English is the common language at IITH, but at first, Ms. Yahagi struggled with the Indian English
@@ -382,6 +453,11 @@ culture—what Ms. Yahagi gained in India went far beyond academic knowledge.</p
 believe that in the future, when I work in society, there will be times when I’ll have to collaborate
 with people from different countries. And when that time comes, this experience will definitely come
 in handy.”</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_3.jpg" alt="Ms. Yahagi with other lab members."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With my lab members</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">To Those Considering Studying Abroad</h5>
                                                 <p class="text-justify">“If you ever get the chance to go abroad while you’re still a student, I really encourage you to take
@@ -399,12 +475,16 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
             </div>
         </div>
     </section>
+	</div>
+	</div>
+	  <div id="section-ja" class="lang-section lang-ja" style="display: none;">
         <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 pbmit-teammember-content">
                     <div class="pbmit-entry-content">
                         <div class="pbmit-heading-subheading animation-style2">
+							<h4 class="pbmit-subtitle">体験記事</h4>
                             <h3 class="pbmit-title">留学で広がる世界：矢矧さんが語る、インド留学のリアルな経験</h3>
                         </div>
 
@@ -415,6 +495,11 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
 の元へ、2024年11月から約１か月間留学しました。人生で初めてパスポートを作って出た海
 外がインド。それも１か月の滞在。そこには、IITHで研究の最前線を体験しながら、新しい環
 境に適応し、多文化の中で成長する日々がありました。</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_1.jpeg" alt="IITHの正門にて"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>IITHの正門にて</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">異文化の中での研究体験</h5>
 <p class="text-justify">
@@ -453,6 +538,11 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
 <p class="text-justify">そんな環境の中でも、寮の近くの体育館でインドの学生と卓球やバドミントンをしたり、学食で
 偶然隣に座ったインド人学生と会話したりと、異文化交流の楽しさを実感する場面も多かった
 そうです。</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_2.jpg" alt="研究室のみなさんと"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>研究室のみなさんと</em></p>
+</div>
                         <h5 class="pbmit-title mt-4 mb-2">英語での挑戦と成長</h5>
                         <p class="text-justify">IITHでは英語が共通言語ですが、インド英語のアクセントに最初は苦労したといいます。</p>
                         <p class="text-justify">「何度も聞き返さないと理解できず、正直大変でした。でも、繰り返し聞き取ろうと努力するうちに、少しずつ慣れてきました。」</p>
@@ -466,6 +556,12 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
 <p class="text-justify">「この経験を通じて、多様なバックグラウンドを持つ人と関わる力がつきました。将来、社会に
 出たときに、異なる文化を持つ人たちと協力して働く場面があると思います。そのときに、この
 経験が必ず活きると感じています。」</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\YAHAGI_3.jpg" alt="研究室のみなさんと"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>研究室のみなさんと</em></p>
+</div>
+
 
                         <h5 class="pbmit-title mt-4 mb-2">留学を考えている人へ</h5>
                                                 <p class="text-justify">「もし、学生のうちに海外へ行く機会があるなら、ぜひ挑戦してほしいです。」</p>
@@ -479,19 +575,9 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
                     </div>
                 </div>
             </div>
-					<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_1.jpeg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>At the main gate of IITH</em></p>
-</div>
-					<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_2.jpg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>With my lab members</em></p>
-						<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_3.jpg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>With my lab members</em></p>
-</div>
         </div>
     </section>
+	</div>
 </div>
 <!-- Page Content End -->
 
@@ -643,6 +729,27 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
 	<script src='js/gsap-animation.js'></script>
 	<!-- Scripts JS -->
 	<script src="js/scripts.js"></script>
+	    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('language-toggle-btn');
+  const enSection = document.getElementById('section-en');
+  const jaSection = document.getElementById('section-ja');
+  let isEnglish = true;
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      enSection.style.display = 'none';
+      jaSection.style.display = '';
+      btn.textContent = 'English / 日本語';
+    } else {
+      enSection.style.display = '';
+      jaSection.style.display = 'none';
+      btn.textContent = '日本語 / English';
+    }
+    isEnglish = !isEnglish;
+  });
+});
+</script>
 	
 </body>
 </html>

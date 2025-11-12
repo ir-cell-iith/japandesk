@@ -34,6 +34,61 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
+		<style>
+.language-toggle-wrapper {
+  position: relative; /* Parent to anchor absolute child */
+  min-height: 60px; /* Ensure space for button */
+}
+
+.language-toggle-btn-container {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 20;
+  /* Responsive fallback for smaller screens */
+}
+@media (max-width: 700px) {
+  .language-toggle-btn-container {
+    position: static;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    right: auto;
+    top: auto;
+  }
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 0.47em 1.5em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #232323;
+  background: #fff;
+  border: 2px solid #dadada;
+  border-radius: 2em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(30,30,40,0.04);
+  transition:
+    background 0.18s,
+    color 0.18s,
+    border 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+.toggle-btn:focus,
+.toggle-btn:hover {
+  background: #f6f6f9;
+  color: #3182ce;
+  border-color: #c2c2c2;
+  box-shadow: 0 4px 18px 0 rgba(30,100,200,0.07);
+}
+.toggle-btn:active {
+  background: #3182ce;
+  color: #fff;
+  border-color: #3182ce;
+}
+</style>
 </head>
 
 <body>
@@ -304,6 +359,12 @@
 
 <!-- Page Content -->
 <div class="page-content">
+		    <div class="language-toggle-section">
+<div style="display: flex; justify-content: flex-end; align-items: flex-start; margin-top: 32px;">
+  <button id="language-toggle-btn" class="toggle-btn">日本語 / English</button>
+</div>
+
+    <div id="section-en" class="lang-section lang-en">
     <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
@@ -320,6 +381,11 @@ Indian Institute of Technology Hyderabad (IITH), conducting IT-related research
 together with IITH graduate students. The experiences he gained in a research
 environment, culture, and daily life so different from Japan significantly transformed his
 values.</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\TANABU_1.jpg" alt="Ms. Yahagi with other lab members."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With fellow research interns at IITH Prof. Kataoka’s laboratory (Mr. TANABU: second from the right)</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">“Why India? Why IITH?” — I wanted to see and find out for myself</h5>
 <p class="text-justify">
@@ -374,6 +440,11 @@ students’ enthusiasm for research and learning. They were already thinking ser
 about how to use their current studies and research at IITH as a foundation to take
 further steps in their careers. He was also impressed by the high number of female students at
 the institute, despite it being a science and engineering university.</p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\TANABU_2.jpg" alt="With fellow research interns at the Holi festival on campus"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With fellow research interns at the Holi festival on campus (Mr. TANABU: the front left)</em></p>
+</div>
 
                         <h5 class="pbmit-title mt-4 mb-2">Discovering Japan’s Strengths and Awakening to My Identity as Japanese</h5>
                         <p class="text-justify"><i>“In Japan, stable Wi-Fi, safe tap water, and clean streets are all taken for granted. But being in
@@ -404,14 +475,25 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
             </div>
         </div>
     </section>
+	</div>
+	</div>
+		  <div id="section-ja" class="lang-section lang-ja" style="display: none;">
+
 <section class="pbmit-team-single">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 pbmit-teammember-content">
                 <div class="pbmit-entry-content">
+					<div class="pbmit-heading-subheading animation-style2">
+                                                    <h4 class="pbmit-subtitle">体験記事</h4>
                     <h5 class="pbmit-title mt-4 mb-2">あえて「インド」を選択　——　研究と生活の先で出会った“日本人としての自分”</h5>
 
                     <p class="text-justify">2025年2月、東京大学工学部の学部4年生になろうとしていた田名部智也さんは、1か月間にわたりインド工科大学ハイデラバード校（IITH）に滞在し、現地の大学院生と共にIT関連の研究に取り組みました。日本とは大きく異なる研究環境、文化、生活の中で得た学びは、彼の価値観を大きく変えることになります。</p>
+					<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\TANABU_1.jpg" alt="IITH片岡教授研究室にて（右から２番目が田名部さん）"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>IITH片岡教授研究室にて（右から２番目が田名部さん）</em></p>
+</div>
 
                     <h5 class="pbmit-title mt-4 mb-2">「なぜインド？　なぜIITH？」——　見てみたい、確かめてみたい、だから行ってみた</h5>
                     <p class="text-justify">田名部さんは、学部4年生で配属される研究室の希望を出すにあたり、まず「研究」とはどういうものなのか、一度研究の現場を体験してみたいと思っていました。そんな矢先、所属大学が募集していた「IITHでの研究インターンシッププログラム」が目に留まりました。研究が体験できるプログラムは、インド以外にもありましたが、過去にヨーロッパや北米に居住経験がある田名部さんは、あえてインドを選びました。</p>
@@ -439,7 +521,11 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
                     </p>
 
                     <p class="text-justify">また、キャンパス内でのIITH学生との交流を通して、田名部さんに印象づけられたことは、彼らの研究や学びに対する"熱量"の高さ。IITHでの研究や学びを糧にして、いかにその先、ステップアップしてゆくかを、学生である今から真剣に考えていること。また理工系大学にも関わらず、女子学生が多いこと、でした。</p>
-
+					<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\TANABU_2.jpg" alt="研究インターン生仲間とキャンパス内でのホーリー祭りにて（左前が田名部さん）"
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>研究インターン生仲間とキャンパス内でのホーリー祭りにて（左前が田名部さん）</em></p>
+</div>
                     <h5 class="pbmit-title mt-4 mb-2">日本のすばらしさ、日本人としてのアイデンティティーへの目覚め</h5>
                     <p class="text-justify">
                         <i>「日本だと、どこにいてもWi-Fiが安定していて、水道の水が飲める、ゴミが落ちていないとか、"インフラとして整っている"ということが、どれだけありがたいか初めて実感しました。今までは、海外で活躍したいと思っていましたが、こういう素晴らしい日本に貢献したい、という気持ちが芽生えました。普段、日本で"あたりまえ"に享受していた快適さや安心感は、決して"あたりまえ"ではないんだということに気づきました」</i>
@@ -464,6 +550,7 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
         </div>
     </div>
 </section>
+</div>
 
 </div>
 <!-- Page Content End -->
@@ -616,6 +703,27 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
 	<script src='js/gsap-animation.js'></script>
 	<!-- Scripts JS -->
 	<script src="js/scripts.js"></script>
+		    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('language-toggle-btn');
+  const enSection = document.getElementById('section-en');
+  const jaSection = document.getElementById('section-ja');
+  let isEnglish = true;
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      enSection.style.display = 'none';
+      jaSection.style.display = '';
+      btn.textContent = 'English / 日本語';
+    } else {
+      enSection.style.display = '';
+      jaSection.style.display = 'none';
+      btn.textContent = '日本語 / English';
+    }
+    isEnglish = !isEnglish;
+  });
+});
+</script>
 	
 </body>
 </html>
