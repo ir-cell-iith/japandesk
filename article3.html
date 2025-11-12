@@ -87,6 +87,42 @@
   color: #fff;
   border-color: #3182ce;
 }
+
+.article-image-wrapper {
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Odd images float right */
+.article-image-wrapper:nth-of-type(odd) {
+  float: right;
+  margin: 0 0 20px 30px;
+}
+
+/* Even images float left */
+.article-image-wrapper:nth-of-type(even) {
+  float: left;
+  margin: 0 30px 20px 0;
+}
+
+.article-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.article-image-wrapper p {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .article-image-wrapper {
+    float: none !important;
+    max-width: 100%;
+    margin: 20px 0 !important;
+  }
+}
 </style>
 
 
@@ -398,7 +434,7 @@ recruiting students for a “Research Internship Program at IITH”. Although he
 much about India at that time, as he followed developments in AI, India naturally came into
 view, and his interest in the country grew.
 </p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>With fellow research interns at the IITH main gate (Mr. JOYA second from the left)</em></p>
@@ -447,7 +483,7 @@ campus with energy.</p>
                         <p class="text-justify"><i>&quot;Even though our cultures and lifestyles were completely different, what made us laugh or
 what we worried about turned out to be surprisingly similar. To feel that commonality
 within difference was, I believe, the most valuable experience of all.&quot;</i></p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>With fellow research interns at the IITH campus festival (Mr. JOYA in the center)</em></p>
@@ -496,7 +532,7 @@ through and grown within the ‘chaos” of India.</p>
                     <p class="text-justify">
                         きっかけは、社会に変化をもたらしている技術、特にAIについて学びたいと思い始めていた矢先、所属大学が募集していた「IITHでの研究インターンシッププログラム」の案内を目にしたことです。インドという国について詳しく知っていたわけではありませんが、AIの話を追っていくうちに、自然とインドのことが目に入り、インドに興味が湧いてきた時期でもありました。
                     </p>
-                    <div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>研究インターン生仲間とIITH正門にて（左から２番目が城谷さん）</em></p>
@@ -524,7 +560,7 @@ through and grown within the ‘chaos” of India.</p>
                     <p class="text-justify">
                         <i>「文化や生活習慣は全然違うのに、笑うツボや悩むことは意外と同じだった。その“違いの中の共通性”を肌で感じたことが、何よりも価値のある経験だったと思います」</i>
                     </p>
-                    <div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>研究インターン生仲間とIITH学園祭にて（真ん中が城谷さん）</em></p>
