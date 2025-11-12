@@ -34,6 +34,65 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
+<style>
+.language-toggle-wrapper {
+  position: relative; /* Parent to anchor absolute child */
+  min-height: 60px; /* Ensure space for button */
+}
+
+.language-toggle-btn-container {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  z-index: 20;
+  /* Responsive fallback for smaller screens */
+}
+@media (max-width: 700px) {
+  .language-toggle-btn-container {
+    position: static;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    right: auto;
+    top: auto;
+  }
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 0.47em 1.5em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #232323;
+  background: #fff;
+  border: 2px solid #dadada;
+  border-radius: 2em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(30,30,40,0.04);
+  transition:
+    background 0.18s,
+    color 0.18s,
+    border 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+.toggle-btn:focus,
+.toggle-btn:hover {
+  background: #f6f6f9;
+  color: #3182ce;
+  border-color: #c2c2c2;
+  box-shadow: 0 4px 18px 0 rgba(30,100,200,0.07);
+}
+.toggle-btn:active {
+  background: #3182ce;
+  color: #fff;
+  border-color: #3182ce;
+}
+</style>
+
+
+
+
 </head>
 
 <body>
@@ -304,6 +363,14 @@
 
 <!-- Page Content -->
 <div class="page-content">
+    
+    <div class="language-toggle-section">
+<div style="display: flex; justify-content: flex-end; align-items: flex-start; margin-top: 32px;">
+  <button id="language-toggle-btn" class="toggle-btn">日本語 / English</button>
+</div>
+
+    
+  <div id="section-en" class="lang-section lang-en">
     <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
@@ -311,187 +378,175 @@
                     <div class="pbmit-entry-content">
                         <div class="pbmit-heading-subheading animation-style2">
                             <h4 class="pbmit-subtitle">Experience Articles</h4>
-                            <h3 class="pbmit-title">A World Expanded Through Study Abroad: Ms. YAHAGI Momoko Shares Her Real Experiences in India</h3>
+                            <h3 class="pbmit-title">Discoveries in Chaos: How One Month at IITH Changed My Perspective</h3>
                         </div>
-
-                        <h5 class="pbmit-title mt-4 mb-2">“My first time overseas was India”—a challenge that changed me</h5>
-                        <p class="text-justify">Ms. Yahagi (*) spent about one month studying at the Indian Institute of Technology Hyderabad
-(IITH) starting in November 2024. This opportunity arose from a connection between her academic
-advisor, Prof. Hemanth Noothalapati, and Prof. Suhanya Duraiswarmy at IITH, who were joint
-research collaborators under the JICA FRIENDSHIP2.0 project. India was the first country she ever
-visited abroad—she even had to get a passport for the first time. During her stay, she experienced
-cutting-edge research, adapted to a new environment, and grew while immersed in a multicultural
-setting.</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">Research Experience in a Different Culture</h5>
+                        <p class="text-justify"><i>&quot;I came to IITH for AI research. But what awaited me was far more than just research—it
+was an experience that shook my worldview through daily life and encounters.&quot;</i></p>
 <p class="text-justify">
-    Ms. Yahagi had been conducting research using Raman spectroscopy in her home university’s lab. 
-    At IITH, she had access to a state-of-the-art Raman spectrometer, which allowed her to advance her research.
+So says Mr. JOYA Kosuke who took part in a short-term research internship at the Indian
+Institute of Technology Hyderabad (IITH) during his spring break (February–March 2025)
+between his third and fourth year as an undergraduate in the Faculty of Engineering at the
+University Tokyo. For about one month, he conducted research alongside IITH graduate
+students while living in the student dormitory, immersing himself in both research and
+campus life. What did he learn from this experience?
 </p>
+                        <h5 class="pbmit-title mt-4 mb-2">Why IITH?</h5>
 
 <p class="text-justify">
-    “While we also have a Raman spectrometer at my university, it’s an older model and requires regular maintenance, 
-    which sometimes makes it unusable. The one at IITH was newer and didn’t require downtime for maintenance, 
-    so I could use it whenever I needed—it was really convenient.”
+The trigger came just as he had begun wanting to learn more about technologies that are
+transforming society, especially AI, when he came across a notice from his university
+recruiting students for a “Research Internship Program at IITH”. Although he did not know
+much about India at that time, as he followed developments in AI, India naturally came into
+view, and his interest in the country grew.
 </p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With fellow research interns at the IITH main gate (Mr. JOYA second from the left)</em></p>
+</div>
+
 
 <p class="text-justify">
-    She also noted that research ethics practices were somewhat more flexible in India compared to Japan. 
-    Thanks to the cooperation of local volunteers, she was able to proceed with her research smoothly.
+<i>&quot;India is now increasing its global presence as a digital powerhouse. I learned that in fields
+like IT and AI, remarkable advances are being made, and it is the IITs 1 —Indian Institutes of
+Technology—that support such changes. Looking at the global tech industry, I noticed that
+many executives of leading U.S. companies are IIT graduates. The fact that so many
+excellent engineers are produced by IITs and go on to shine worldwide made me wonder: in
+what kind of environment, and through what kind of learning, were they nurtured? I wanted
+to see and feel for myself how Indian students study and what kind of daily lives they lead.&quot;</i> 
 </p>
+<h5 class="pbmit-title mt-4 mb-2">Confronting the “Reality” of Research in India</h5>
+                        <p class="text-justify">At IITH, a doctoral student served as his mentor, guiding him through the research process.
+Although his original plan had been to work on medical imaging AI, he ultimately joined a
+project related to autonomous driving AI.</p>
+<p class="text-justify"><i>&quot;Although the theme of my project changed, it still fell within the broad field of AI that I was
+interested in, so I had no problem with it. However, I did face difficulties with the network
+and research environment—for example, Wi-Fi was sometimes unstable, and installing
+datasets could take several days. Despite such challenges, the way of proceeding with the
+research itself was an extremely meaningful experience. The process of first understanding
+what had already been done in the laboratory and then considering a new, original
+direction will, I believe, serve as a foundation for my basic approach to research in the
+future.&quot;</i></p>
+<p class="text-justify">Yet what left an even greater impact on him went beyond research itself.</p>
 
-<p class="text-justify">
-    During her stay, a three-day international conference hosted by the Department of Chemical Engineering at IITH 
-    was held on campus. Researchers from around the world, including Japan, gathered, and many students also gave 
-    presentations and participated in poster sessions. She was also able to connect with other participants over dinner 
-    at a campus restaurant.
-</p>
-
-<p class="text-justify">
-    “I realized this was a unique environment at the university focusing on research—different from my home university. 
-    It was a valuable experience.”
-</p>
-
-
-                        <h5 class="pbmit-title mt-4 mb-2">Challenges and Discoveries in Daily Life</h5>
-                        <p class="text-justify">“The first thing that surprised me when I arrived on campus was that there was no toilet paper in the
-restrooms.”</p>
-<p class="text-justify">Life in India was a series of surprises for Ms. Yahagi. From bathroom and shower facilities to food
-and sense of time, many things that are taken for granted in Japan were completely different in India.</p>
-<p class="text-justify">Still, she had made up her mind before going abroad: “Since I’m in a different country, I’ll adapt to
-its culture. Rather than imposing Japanese ways, I’ll try to live according to the local customs.” That
-mindset helped her overcome these differences.</p>
-<p class="text-justify">Despite the challenges, she found joy in cultural exchange—playing table tennis and badminton with
-Indian students at the on-campus gym near her dormitory, or striking up conversations with Indian
-students she happened to sit next to in the cafeteria.</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">A Challenge and Growth Through English</h5>
-                        <p class="text-justify">English is the common language at IITH, but at first, Ms. Yahagi struggled with the Indian English
-accent.</p>
-<p class="text-justify">“I had to ask people to repeat themselves over and over—it was honestly tough. But the more I tried
-to listen carefully, the more I got used to it.”</p>
-<p class="text-justify">By placing herself in an environment where English was not just studied but actively used, she
-improved not only her language skills but also her ability to communicate across cultures.</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">What She Gained from Studying Abroad</h5>
-                        <p class="text-justify">“The passion for research was incredible. It was normal for Indian students to go to the lab even on
-weekends. After breakfast, they’d ask, ‘Are you going to the lab today too?’”</p>
-                        <p class="text-justify">The attitude toward research, the perception of time, and the ability to adapt to life in a different
-culture—what Ms. Yahagi gained in India went far beyond academic knowledge.</p>
-                        <p class="text-justify">“Through this experience, I developed the ability to work with people from diverse backgrounds. I
-believe that in the future, when I work in society, there will be times when I’ll have to collaborate
-with people from different countries. And when that time comes, this experience will definitely come
-in handy.”</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">To Those Considering Studying Abroad</h5>
-                                                <p class="text-justify">“If you ever get the chance to go abroad while you’re still a student, I really encourage you to take
-it.”</p>
-<p class="text-justify">It’s precisely because it’s study abroad—not just travel—that you can engage deeply with local
-culture and people. For Ms. Yahagi, her one month in India was filled with both surprises and
-learning.</p>
-<p class="text-justify">“You might feel anxious at first. But once it’s over and you look back, you’ll realize that everything
-contributed to your growth.”</p>
+                        <h5 class="pbmit-title mt-4 mb-2">A “Shower of Cultural Differences” in the Dormitory</h5>
+                        <p class="text-justify">Life in the IITH student dormitory was a series of culture shocks.</p>
+<p class="text-justify"><i>&quot;From the outside the dormitory looked fine, but inside the living conditions were such that
+there was no air conditioning 2 , occasional blackouts, and even stray dogs wandering the
+hallways—circumstances hard to imagine in Japan. At first I was concerned about hygiene,
+but as long as I was careful with drinking water, I managed to stay healthy without major
+issues. Compared to living conditions in Japan, it was by no means ideal, yet local students
+lived cheerfully and normally within it. I came to feel the importance of a certain
+‘looseness’ or ‘flexibility’—that you can find ways to enjoy yourself in any environment,
+and that society continues to function even without perfection.&quot;</i></p>
+                        <h5 class="pbmit-title mt-4 mb-2">Friendship that Brings Insights and Joy</h5>
+                        <p class="text-justify">Conversations with Indian students took place almost daily in the dormitory and cafeteria.
+One day it was with a national-level badminton player, another with a graduate student
+aspiring to become an AI researcher. Friendships grew naturally through everyday meals
+and campus events. His internship also coincided with the university festival, filling the
+campus with energy.</p>
+                        <p class="text-justify"><i>&quot;Even though our cultures and lifestyles were completely different, what made us laugh or
+what we worried about turned out to be surprisingly similar. To feel that commonality
+within difference was, I believe, the most valuable experience of all.&quot;</i></p>
+<div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>With fellow research interns at the IITH campus festival (Mr. JOYA in the center)</em></p>
+</div>
+ <h5 class="pbmit-title mt-4 mb-2">“Take the Step, and the World You See Will Change”</h5>
+                                                <p class="text-justify"><i>&quot;Many people may think of India as ‘unhygienic’ or ‘difficult to live in’. But that alone
+shouldn’t be a reason to avoid it. With the right preparation, living there is entirely
+manageable, and you will surely gain something more. In reality, the roads are a constant
+chorus of honking, with cars, motorcycles, people, and animals all moving together.
+Blackouts happen, schedules are relaxed—daily life is quite different from the ‘orderly’
+routine of Japan. At the same time, IT-driven services are more widespread than in Japan.
+Even at small corner shops, QR code payments are available, and the convenience of the
+online payment system was striking. Through this and many other experiences, I felt the
+strength of India—the vitality created by an attitude of not fearing trial and error, even
+within an environment that has many underdeveloped aspects. You may not know what the
+‘correct’ way is, yet society keeps moving, and people keep smiling. By placing myself in
+such an environment, I felt freed for the first time from the belief that ‘things must be a
+certain way.’ The standards of ‘normal’ within me were shaken, and I realized just how
+much I had been surrounded by Japanese values in every aspect of daily life.&quot;</i></p>
+<p class="text-justify"><i>&quot;If I had to describe this month in a single word, it would be ‘chaos.’ But not in a negative
+sense—it was chaos in a bright and positive sense.&quot;</i></p>
+<p class="text-justify">He reflected, his expression carrying the quiet confidence of someone who had fully lived
+through and grown within the ‘chaos” of India.</p>
 <p class="text-justify">Why not take the leap and discover a new version of yourself out in the world?</p>
-                        <p class="text-justify mt-4"><em>(*) Ms. Momoko Yahagi: Second-year Master’s student, Graduate School of Natural Science and
-Technology, Shimane University (at the time of study abroad at IITH)</em></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-        <section class="pbmit-team-single">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 pbmit-teammember-content">
-                    <div class="pbmit-entry-content">
-                        <div class="pbmit-heading-subheading animation-style2">
-                            <h3 class="pbmit-title">留学で広がる世界：矢矧さんが語る、インド留学のリアルな経験</h3>
-                        </div>
-
-                        <h5 class="pbmit-title mt-4 mb-2">「初めての海外がインド」　— そんな挑戦が私を変えた —</h5>
-                        <p class="text-justify">矢矧さん(*)は、島根大学の修士課程で研究を進める中、所属している研究室の指導教員(へ
-マンス先生)とインド工科大学ハイデラバード校 (IITH) の教員（スハンヤ先生）が
-、JICA　FRIENDSHIP2.0プロジェクトでの共同研究者同士であるという繋がりから、IITH教員
-の元へ、2024年11月から約１か月間留学しました。人生で初めてパスポートを作って出た海
-外がインド。それも１か月の滞在。そこには、IITHで研究の最前線を体験しながら、新しい環
-境に適応し、多文化の中で成長する日々がありました。</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">異文化の中での研究体験</h5>
-<p class="text-justify">
-矢矧さんは、研究室で「ラマン分光法」を活用した研究を行っていました。IITHには最新のラマ
-ン分光装置があり、それを使いながら研究を進めることができました。
-</p>
-
-<p class="text-justify">
-「自分の所属大学にもその装置はありますが、少し古い装置で、修理が必要な時があり、そ
-の分、修理の技術は身に着くのですが、使用できない時があります。IITHの装置は新しいの
-で修理時間が必要ないようで、いつでも使えて便利でした。
-</p>
-
-<p class="text-justify">
-また、研究倫理の面でも、日本とは異なる柔軟さがあり、現地のボランティアの協力のもと、
-スムーズに研究を進めることができました。
-</p>
-
-<p class="text-justify">
-丁度IITHに滞在中に、自分を受け入れているIITHの化学工学科主催で3日間の国際学会が
-キャンパス内でありました。日本を含む、世界のいろいろな国の研究者が集い、学生も多数プ
-レゼンテーションやポスターセッションをしていました。夜キャンパス内のレストランで、学会参
-加者らと会食しながら交流もできました。自大学とは異なり、研究を重視している大学だから
-こその環境だなぁ、とつくづく思いましたし、貴重な経験ができました。」
-</p>
-
-
-
-                        <h5 class="pbmit-title mt-4 mb-2">生活面でのチャレンジと発見</h5>
-                        <p class="text-justify">「キャンパスに着いて最初に驚いたのは、トイレにトイレットペーパーがなかったことでした。」</p>
-<p class="text-justify">矢矧さんにとって、インドでの生活はまさに「サプライズ」の連続でした。シャワーやトイレの設
-備、食事、時間感覚——日本では当たり前のことが、インドでは大きく異なっていました。</p>
-<p class="text-justify">でも、留学前から、「海外に来た以上、その国の文化に適応するしかない。日本のやり方を押
-し通すのではなく、現地の流儀に合わせて生活してみよう」と心に決めていたので、違いも乗
-り越えることができたそうです。</p>
-<p class="text-justify">そんな環境の中でも、寮の近くの体育館でインドの学生と卓球やバドミントンをしたり、学食で
-偶然隣に座ったインド人学生と会話したりと、異文化交流の楽しさを実感する場面も多かった
-そうです。</p>
-                        <h5 class="pbmit-title mt-4 mb-2">英語での挑戦と成長</h5>
-                        <p class="text-justify">IITHでは英語が共通言語ですが、インド英語のアクセントに最初は苦労したといいます。</p>
-                        <p class="text-justify">「何度も聞き返さないと理解できず、正直大変でした。でも、繰り返し聞き取ろうと努力するうちに、少しずつ慣れてきました。」</p>
-                        <p class="text-justify">英語を学ぶのではなく、実際に使う環境に身を置くことで、語学力だけでなく、異なる文化の人と意思疎通を図る力も磨かれたと語ります。</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">留学を通じて得たもの</h5>
-                        <p class="text-justify">「研究に対する情熱がすごかったです。インドの学生は土日も研究室に通い、朝食後には『今
-日も研究室行く？』と聞かれるのが当たり前でした。」</p>
-<p class="text-justify">研究への姿勢、時間感覚、異文化の中での生活適応力——インド留学で得たものは、単なる
-学術的な知識だけではありませんでした。</p>
-<p class="text-justify">「この経験を通じて、多様なバックグラウンドを持つ人と関わる力がつきました。将来、社会に
-出たときに、異なる文化を持つ人たちと協力して働く場面があると思います。そのときに、この
-経験が必ず活きると感じています。」</p>
-
-                        <h5 class="pbmit-title mt-4 mb-2">留学を考えている人へ</h5>
-                                                <p class="text-justify">「もし、学生のうちに海外へ行く機会があるなら、ぜひ挑戦してほしいです。」</p>
-<p class="text-justify">旅行ではなく、留学だからこそ、現地の文化や人々と深く関わることができます。矢矧さんにと
-って、インドでの1ヶ月は、驚きと学びに満ちた貴重な時間でした。</p>
-<p class="text-justify">「最初は不安かもしれません。でも、終わった後に振り返ると、すべてが大きな成長につなが
-っていると実感できるはずです。」</p>
-<p class="text-justify">あなたも、世界に飛び出し、新たな自分を発見してみませんか？</p>
-                        <p class="text-justify mt-4"><em>(*) 矢矧桃子（ヤハギモモコ）さん : 島根大学　自然科学研究科　修士課程2年（IITH留学当時
-）</em></p>
+  </div>
+  <div id="section-ja" class="lang-section lang-ja" style="display: none;">
+    <section class="pbmit-team-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 pbmit-teammember-content">
+                <div class="pbmit-entry-content">
+                    <div class="pbmit-heading-subheading animation-style2">
+                                                    <h4 class="pbmit-subtitle">体験記事</h4>
+                        <h3 class="pbmit-title">カオスの中の気づき —— IITHでの1か月が変えた価値観</h3>
                     </div>
+                    <p class="text-justify"><i>"AI研究を目的にIITHへ。しかし、そこで待っていたのは、研究にとどまらない体験。生活と出会いを通じて、自分の価値観を揺さぶる体験が待っていました。"</i></p>
+                    <p class="text-justify">
+                        そう語るのは、2025年2月から3月にかけて、東京大学工学部の学部3年生から4年生になる春休み期間中に、インド工科大学ハイデラバード校（IITH）で短期インターンシップを経験した城谷光亮さんです。約1か月間、現地の大学院生と共に研究し、学生寮でIITH学生達と一緒に生活を送りながら、彼が得た学びとは何だったのでしょうか。
+                    </p>
+                    <h5 class="pbmit-title mt-4 mb-2">なぜIITHへ？</h5>
+                    <p class="text-justify">
+                        きっかけは、社会に変化をもたらしている技術、特にAIについて学びたいと思い始めていた矢先、所属大学が募集していた「IITHでの研究インターンシッププログラム」の案内を目にしたことです。インドという国について詳しく知っていたわけではありませんが、AIの話を追っていくうちに、自然とインドのことが目に入り、インドに興味が湧いてきた時期でもありました。
+                    </p>
+                    <div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>研究インターン生仲間とIITH正門にて（左から２番目が城谷さん）</em></p>
+</div>
+                    <p class="text-justify">
+                        <i>「インドは今、デジタル大国として世界的に存在感を増している国。ITやAIといった分野でも目覚ましい発展を遂げていて、そうした変化を支えているのがIIT—インド工科大学だと知りました。実際、世界のテック業界を見渡すと、米国の有力企業の経営層にはIIT出身者が多く見られます。数多くの優秀なエンジニアがIITから輩出され、世界に羽ばたいているのを知るにつけ、では彼らは、どのような環境で、どのような学びをしてきたのかと疑問が湧いてきました。実際にインドの学生たちがどんなふうに学び、どんな日常を送っているのかを、自分の目で見て感じてみたいと思いました」</i>
+                    </p>
+                    <h5 class="pbmit-title mt-4 mb-2">インドの研究現場で直面した "リアル" </h5>
+                    <p class="text-justify">
+                        現地では、IITHの博士課程の学生がメンターとしてついてくれ、研究活動が進められました。当初予定していた医療系の画像診断AIの研究とは異なり、最終的には自動運転関連のAIプロジェクトに関わることに。 
+                    </p>
+                    <p class="text-justify">
+                        <i>「テーマは変わったけれど、AIという大きな枠組みでは興味のある分野だったので問題はありませんでした。しかし、ネットワークや研究環境に関しては苦労もありました。例えば、時にWi-Fiが不安定になる、データセットのインストールに数日かかるなどです。そうした課題はありつつも、研究の進め方自体は非常に有意義な経験でした。これまで研究室で取り組まれてきた内容を理解し、その上で新規性のある方針を考えるというプロセスは、研究生活の基本的な姿勢として今後の礎になると思います」 </i>
+                    </p>
+                    <p class="text-justify">しかし、それ以上に大きなインパクトを与えたのは、研究以外の体験でした。 </p>
+                    <h5 class="pbmit-title mt-4 mb-2">学生寮での「異文化シャワー」 </h5>
+                    <p class="text-justify"></p>IITHの学生寮での生活は、まさにカルチャーショックの連続。</p>
+                    <p class="text-justify">
+                        <i>「学生寮は、外観は整っていても、中での生活環境は、エアコンがない、停電したり、野犬が廊下に入ってくるなど、日本では考えにくい環境でした。最初は衛生面が気になったものの、飲み水には十分気をつけていたら、実際には大きな体調不良もなく過ごせました。日本の生活環境と比較すると決して良いとは言えない環境でも、現地の学生たちはその中で元気に楽しそうに、当たり前のように暮らしている。どんな環境でも工夫して楽しめる。完璧でなくても社会は回るという、ある種の“ゆるさ”や“柔軟性”の大切さを感じました」</i>
+                    </p>
+                    <h5 class="pbmit-title mt-4 mb-2">交流が生んだ気づきと感動</h5>
+                    <p class="text-justify">
+                        寮や学食では、毎日のようにインド人学生たちとの会話がありました。ある日はバドミントンのナショナル代表選手、ある日はAI研究者志望の院生。日常の食事やイベントを通して、交流が生まれました。インターン期間中に、ちょうど学園祭とも重なり、キャンパスは活気に満ちていました。
+                    </p>
+                    <p class="text-justify">
+                        <i>「文化や生活習慣は全然違うのに、笑うツボや悩むことは意外と同じだった。その“違いの中の共通性”を肌で感じたことが、何よりも価値のある経験だったと思います」</i>
+                    </p>
+                    <div class="text-center" style="max-width:600px; margin:auto;">
+  <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
+       class="img-fluid rounded shadow">
+  <p class="mt-2"><em>研究インターン生仲間とIITH学園祭にて（真ん中が城谷さん）</em></p>
+</div>
+                    <h5 class="pbmit-title mt-4 mb-2">「踏み出せば、見える世界が変わる」</h5>
+                    <p class="text-justify">
+                        <i>「インドに対して“衛生面が心配”とか“生活が大変そう”といったイメージを持つ人も多いと思います。でも、それを理由に選択肢から外してしまうのは、もったいない。きちんと備えて行けば問題なく過ごせます。そして、それ以上の何かをきっと得られると思います。実際、道路はクラクションの嵐で、車とバイクと人と動物が入り混じって進んでいくし、停電やスケジュールの緩さも、日本の“きちんとした”日常とはまるで違いました。その一方で、ITの力を駆使したサービスは日本以上に広く浸透しています。街角の小さなお店でもQRコード決済ができるほど整備されたオンライン決済システムは、実際とても便利でした。この一例以外にも様々な経験を通して、未整備な部分も多い環境の中で、試行錯誤や挑戦を恐れない姿勢がインドに確かな変化を生み出している力強さを感じました。何が正解か分からないけれど、それでも社会は動いているし、人は笑っている。そんな環境に身を置いてみて、初めて“こうでなければならない”という思い込みから自由になれた気がします。自分の中の『当たり前』の基準が揺さぶられました。生活のあらゆる面で、自分がどれだけ日本的な価値観に囲まれてきたかに気づかされました」 </i>
+                    </p>
+                    <p class="text-justify">
+「この１か月を一言で表すと『カオス』です。それはネガティブではなく、からっとした
+ポジティブな意味での『カオス』なんです」と語る城谷さんの表情には、インドでの『カ
+オス』と共に過ごした時間の確かな手応えがにじんでいました。                    </p>
                 </div>
             </div>
-					<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_1.jpeg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>At the main gate of IITH</em></p>
-</div>
-					<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_2.jpg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>With my lab members</em></p>
-						<div class="text-center my-4">
-    <img src="images\experience\YAHAGI_3.jpg" alt="Ms. Yahagi in IITH Lab" class="img-fluid rounded shadow">
-    <p class="mt-2"><em>With my lab members</em></p>
-</div>
         </div>
-    </section>
+    </div>
+</section>
+  </div>
+</div>
+
+
 </div>
 <!-- Page Content End -->
 
@@ -643,6 +698,28 @@ Technology, Shimane University (at the time of study abroad at IITH)</em></p>
 	<script src='js/gsap-animation.js'></script>
 	<!-- Scripts JS -->
 	<script src="js/scripts.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('language-toggle-btn');
+  const enSection = document.getElementById('section-en');
+  const jaSection = document.getElementById('section-ja');
+  let isEnglish = true;
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      enSection.style.display = 'none';
+      jaSection.style.display = '';
+      btn.textContent = 'English / 日本語';
+    } else {
+      enSection.style.display = '';
+      jaSection.style.display = 'none';
+      btn.textContent = '日本語 / English';
+    }
+    isEnglish = !isEnglish;
+  });
+});
+</script>
+
 	
 </body>
 </html>
