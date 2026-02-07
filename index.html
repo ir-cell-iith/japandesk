@@ -47,26 +47,6 @@
 	var pausespeed=(pauseit==0)? copyspeed: 0
 	var actualheight=''
 
-	function scrollmarquee(){
-	if (parseInt(cross_marquee.style.top)>(actualheight*(-1)+8)) //if scroller hasn't reached the end of its height
-	cross_marquee.style.top=parseInt(cross_marquee.style.top)-copyspeed+"px" //move scroller upwards
-	else //else, reset to original position
-	cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
-	}
-
-	function initializemarquee(){
-	cross_marquee=document.getElementById("vmarquee")
-	cross_marquee.style.top=0
-	marqueeheight=document.getElementById("marqueecontainer").offsetHeight
-	actualheight=cross_marquee.offsetHeight //height of marquee content (much of which is hidden from view)
-	if (window.opera || navigator.userAgent.indexOf("Netscape/7")!=-1){ //if Opera or Netscape 7x, add scrollbars to scroll and exit
-	cross_marquee.style.height=marqueeheight+"px"
-	cross_marquee.style.overflow="scroll"
-	return
-	}
-	setTimeout('lefttime=setInterval("scrollmarquee()",30)', delayb4scroll)
-	}
-
 	if (window.addEventListener)
 	window.addEventListener("load", initializemarquee, false)
 	else if (window.attachEvent)
@@ -657,31 +637,31 @@
 					<div class="col-md-12 col-xl-4 news-section-div">
 						<div class="about-us-three-rightbox">
 							<div class="row">
-<div class="col-md-12">
-    <div class="card card-news panel-default">
-        <div class="card-header">
-             <span class="whats-new-title"><b>What's New</b></span>
-             <span class="whats-new-title-tag"><b><i>Stay Updated with Our News Section</i></b></span>
-        </div>
-        <div class="card-body">
-            <div class="row" id="marqueecontainer">
-                <div class="col-xs-12" id="vmarquee">
-                    <ul> 
-                        <li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="https://www.i.u-tokyo.ac.jp/edu/entra/epiip_e.shtml" target="_blank"> Special Admission for "English Program on Intelligent Information Processing" of University of Tokyo</a> <br><strong><i>13 <sup>th</sup> June 2024</i></strong></li><hr>
-                        
-                        <li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="overview-of-research-grant.html" target="_blank"> Call for Applications for Research Grant 2024 </a> <br><strong><i>27 <sup>th</sup> September 2024</i></strong></li><hr>
-                        
-                        <li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="doc/Japan_Week_Brochure_2023.pdf" target="_blank"> Poster Displays &amp; Workshops.</a> <br><strong>20 <sup>th</sup> September 2024</strong></li><hr>
-                        
-                        <li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="doc/Culture-&amp;-Tourism-Day-Flyer.png" target="_blank"> Cultural &amp; Tourism Day</a> <br><strong><i>23 <sup>rd</sup> September 2024</i></strong></li><hr>
-                        
-                        <li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="#" target="_blank"> Academic Day</a> <br><strong><i>18 <sup>th</sup> September 2024</i></strong></li><hr>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+								<div class="col-md-12">
+									<div class="card card-news panel-default">
+										<div class="card-header">
+											 <span class="whats-new-title"><b>What's New</b></span>
+											 <span class="whats-new-title-tag"><b><i>Stay Updated with Our News Section</i></b></span>
+										</div>
+										<div class="card-body">
+											<div class="row" id="marqueecontainer" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">
+												<div class="col-xs-12" id="vmarquee" style="position: absolute;">
+													<ul> 
+														<li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="https://www.i.u-tokyo.ac.jp/edu/entra/epiip_e.shtml" target="_blank"> Special Admission for "English Program on Intelligent Information Processing" of University of Tokyo</a> <br><strong><i>13 <sup>th</sup> June 2024</i></strong></li><hr>
+														
+														<li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="overview-of-research-grant.html" target="_blank"> Call for Applications for Research Grant 2024 </a> <br><strong><i>27 <sup>th</sup> September 2024</i></strong></li><hr>
+														
+														<li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="doc/Japan_Week_Brochure_2023.pdf" target="_blank"> Poster Displays & Workshops.</a> <br><strong>20 <sup>th</sup> September 2024</strong></li><hr>
+														
+														<li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="doc/Culture-&-Tourism-Day-Flyer.png" target="_blank"> Cultural & Tourism Day</a> <br><strong><i>23 <sup>rd</sup> September 2024</i></strong></li><hr>
+														
+														<li><sup style="top: -1em;"><img src="images/New_gif.gif" style="width: 30px;"></sup><a href="#" target="_blank"> Academic Day</a> <br><strong><i>18 <sup>th</sup> September 2024</i></strong></li><hr>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
