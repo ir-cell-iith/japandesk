@@ -1863,15 +1863,56 @@ textarea.form-control{
 
 .slider-section-div, .news-section-div{margin-top: 25px;}
 
-/*marquee */
-marquee{padding: 10px 0px;color: #222;background-color: #F1F1E6;font-weight: 600;}
+/* 1. Force all parent containers to grow with content */
+.news-section-div, 
+.about-us-three-rightbox, 
+.card-news, 
+.card-body, 
+#marqueecontainer {
+    height: auto !important;
+    min-height: 415px; /* Keeps initial look on big screens */
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+}
 
-#marqueecontainer{
-	position: relative;
-	height: 415px; /*marquee height */
-	background-color: white;
-	overflow: hidden;
-	padding: 2px;
-	padding-left: 4px;
+/* 2. Fix the inner column height */
+#vmarquee {
+    height: auto !important;
+    position: static !important;
+    width: 100%;
+}
+
+/* 3. Improve text wrapping for narrow screens */
+#vmarquee ul li {
+    white-space: normal !important; /* Forces text to wrap instead of clipping */
+    word-wrap: break-word;
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+/* 4. Fix the "NEW" icon alignment */
+#vmarquee li sup {
+    top: 0 !important;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* This ensures the container grows when text wraps on smaller screens */
+@media (max-width: 1199px) {
+    .news-section-div, 
+    .about-us-three-rightbox, 
+    .card-news, 
+    .card-body,
+    #marqueecontainer {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Stack the news below the slider with some spacing */
+    .news-section-div {
+        margin-top: 30px;
+        width: 100% !important;
+    }
 }
 
