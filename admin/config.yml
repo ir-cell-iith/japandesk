@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: ir-cell-iith/japandesk
+  branch: main
+
+site_url: https://japandesk.iith.ac.in
+display_url: https://japandesk.iith.ac.in
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Website Pages"
+    folder: "/"
+    create: false
+    extension: "html"
+    format: "raw"
+    fields:
+      - label: "HTML Content"
+        name: "body"
+        widget: "code"
+        default_language: "html"

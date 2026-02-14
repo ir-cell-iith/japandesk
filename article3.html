@@ -34,58 +34,80 @@
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
 <style>
-.language-toggle-wrapper {
-  position: relative; /* Parent to anchor absolute child */
-  min-height: 60px; /* Ensure space for button */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #3182ce;
+  border: 2px solid #3182ce;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(49,130,206,0.2);
+  transition: all 0.2s ease;
+  outline: none;
 }
 
-.language-toggle-btn-container {
-  position: absolute;
-  top: 18px;
-  right: 32px;
-  z-index: 20;
-  /* Responsive fallback for smaller screens */
+.toggle-btn:hover {
+  background: #2c5aa0;
+  border-color: #2c5aa0;
+  box-shadow: 0 4px 12px 0 rgba(49,130,206,0.3);
+  transform: translateY(-1px);
 }
-@media (max-width: 700px) {
-  .language-toggle-btn-container {
-    position: static;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    right: auto;
-    top: auto;
+
+.toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px 0 rgba(49,130,206,0.2);
+}
+
+.article-image-wrapper {
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Odd images float right */
+.article-image-wrapper:nth-of-type(odd) {
+  float: right;
+  margin: 0 0 20px 30px;
+}
+
+/* Even images float left */
+.article-image-wrapper:nth-of-type(even) {
+  float: left;
+  margin: 0 30px 20px 0;
+}
+
+.article-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.article-image-wrapper p {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+  .pbmit-heading-subheading.animation-style2 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .toggle-btn {
+    align-self: flex-end;
   }
 }
 
-.toggle-btn {
-  display: inline-block;
-  padding: 0.47em 1.5em;
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: #232323;
-  background: #fff;
-  border: 2px solid #dadada;
-  border-radius: 2em;
-  cursor: pointer;
-  box-shadow: 0 2px 12px 0 rgba(30,30,40,0.04);
-  transition:
-    background 0.18s,
-    color 0.18s,
-    border 0.2s,
-    box-shadow 0.2s;
-  outline: none;
-}
-.toggle-btn:focus,
-.toggle-btn:hover {
-  background: #f6f6f9;
-  color: #3182ce;
-  border-color: #c2c2c2;
-  box-shadow: 0 4px 18px 0 rgba(30,100,200,0.07);
-}
-.toggle-btn:active {
-  background: #3182ce;
-  color: #fff;
-  border-color: #3182ce;
+@media (max-width: 768px) {
+  .article-image-wrapper {
+    float: none !important;
+    max-width: 100%;
+    margin: 20px 0 !important;
+  }
 }
 </style>
 
@@ -362,14 +384,13 @@
 
 <!-- Page Content -->
 <div class="page-content">
-    
     <div class="language-toggle-section">
-<div style="display: flex; justify-content: flex-end; align-items: flex-start; margin-top: 32px;">
-  <button id="language-toggle-btn" class="toggle-btn">日本語 / English</button>
-</div>
-
-    
-  <div id="section-en" class="lang-section lang-en">
+        <!-- Language toggle button - positioned absolutely -->
+        <div style="position: sticky; top: 20px; z-index: 100; display: flex; justify-content: flex-end; padding: 20px 20px 10px;">
+            <button id="language-toggle-btn" class="toggle-btn">🌐 Switch to 日本語</button>
+        </div>
+        
+        <div id="section-en" class="lang-section lang-en">
     <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
@@ -377,7 +398,7 @@
                     <div class="pbmit-entry-content">
                         <div class="pbmit-heading-subheading animation-style2">
                             <h4 class="pbmit-subtitle">Experience Articles</h4>
-                            <h3 class="pbmit-title">Discoveries in Chaos: How One Month at IITH Changed My Perspective</h3>
+                            <h3 class="pbmit-title">Insights Amidst Chaos: How One Month at IITH Transformed My Worldview</h3>
                         </div>
                         <p class="text-justify"><i>&quot;I came to IITH for AI research. But what awaited me was far more than just research—it
 was an experience that shook my worldview through daily life and encounters.&quot;</i></p>
@@ -398,7 +419,7 @@ recruiting students for a “Research Internship Program at IITH”. Although he
 much about India at that time, as he followed developments in AI, India naturally came into
 view, and his interest in the country grew.
 </p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>With fellow research interns at the IITH main gate (Mr. JOYA second from the left)</em></p>
@@ -447,7 +468,7 @@ campus with energy.</p>
                         <p class="text-justify"><i>&quot;Even though our cultures and lifestyles were completely different, what made us laugh or
 what we worried about turned out to be surprisingly similar. To feel that commonality
 within difference was, I believe, the most valuable experience of all.&quot;</i></p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>With fellow research interns at the IITH campus festival (Mr. JOYA in the center)</em></p>
@@ -485,7 +506,7 @@ through and grown within the ‘chaos” of India.</p>
             <div class="col-md-12 col-lg-12 pbmit-teammember-content">
                 <div class="pbmit-entry-content">
                     <div class="pbmit-heading-subheading animation-style2">
-                                                    <h4 class="pbmit-subtitle">体験記事</h4>
+                        <h4 class="pbmit-subtitle">体験記事</h4>
                         <h3 class="pbmit-title">カオスの中の気づき —— IITHでの1か月が変えた価値観</h3>
                     </div>
                     <p class="text-justify"><i>"AI研究を目的にIITHへ。しかし、そこで待っていたのは、研究にとどまらない体験。生活と出会いを通じて、自分の価値観を揺さぶる体験が待っていました。"</i></p>
@@ -496,7 +517,7 @@ through and grown within the ‘chaos” of India.</p>
                     <p class="text-justify">
                         きっかけは、社会に変化をもたらしている技術、特にAIについて学びたいと思い始めていた矢先、所属大学が募集していた「IITHでの研究インターンシッププログラム」の案内を目にしたことです。インドという国について詳しく知っていたわけではありませんが、AIの話を追っていくうちに、自然とインドのことが目に入り、インドに興味が湧いてきた時期でもありました。
                     </p>
-                    <div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_1.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>研究インターン生仲間とIITH正門にて（左から２番目が城谷さん）</em></p>
@@ -524,7 +545,7 @@ through and grown within the ‘chaos” of India.</p>
                     <p class="text-justify">
                         <i>「文化や生活習慣は全然違うのに、笑うツボや悩むことは意外と同じだった。その“違いの中の共通性”を肌で感じたことが、何よりも価値のある経験だったと思います」</i>
                     </p>
-                    <div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\JOYA_2.jpg" alt="Mr. JOYA at IITH main gate with his fellow research interns."
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>研究インターン生仲間とIITH学園祭にて（真ん中が城谷さん）</em></p>
@@ -563,7 +584,7 @@ through and grown within the ‘chaos” of India.</p>
 							<div class="widget pt-0">
 								<h2 class="widget-title">Our address</h2>
 								<div class="pbmit-contact-widget-lines">
-									Japan Desk, Room 304A, Admin Block<br> IIT Hyderabad, India
+									Japan Desk, Room G-002, Admin Building<br> IIT Hyderabad, India
 								</div>
 							</div>
 						</div>			
@@ -708,11 +729,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isEnglish) {
       enSection.style.display = 'none';
       jaSection.style.display = '';
-      btn.textContent = 'English / 日本語';
+      btn.innerHTML = '🌐 Switch to English';
     } else {
       enSection.style.display = '';
       jaSection.style.display = 'none';
-      btn.textContent = '日本語 / English';
+      btn.innerHTML = '🌐 Switch to 日本語';
     }
     isEnglish = !isEnglish;
   });
