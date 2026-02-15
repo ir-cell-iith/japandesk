@@ -34,58 +34,80 @@
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
 		<style>
-.language-toggle-wrapper {
-  position: relative; /* Parent to anchor absolute child */
-  min-height: 60px; /* Ensure space for button */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #3182ce;
+  border: 2px solid #3182ce;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(49,130,206,0.2);
+  transition: all 0.2s ease;
+  outline: none;
 }
 
-.language-toggle-btn-container {
-  position: absolute;
-  top: 18px;
-  right: 32px;
-  z-index: 20;
-  /* Responsive fallback for smaller screens */
+.toggle-btn:hover {
+  background: #2c5aa0;
+  border-color: #2c5aa0;
+  box-shadow: 0 4px 12px 0 rgba(49,130,206,0.3);
+  transform: translateY(-1px);
 }
-@media (max-width: 700px) {
-  .language-toggle-btn-container {
-    position: static;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    right: auto;
-    top: auto;
+
+.toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px 0 rgba(49,130,206,0.2);
+}
+
+.article-image-wrapper {
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Odd images float right */
+.article-image-wrapper:nth-of-type(odd) {
+  float: right;
+  margin: 0 0 20px 30px;
+}
+
+/* Even images float left */
+.article-image-wrapper:nth-of-type(even) {
+  float: left;
+  margin: 0 30px 20px 0;
+}
+
+.article-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.article-image-wrapper p {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+  .pbmit-heading-subheading.animation-style2 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .toggle-btn {
+    align-self: flex-end;
   }
 }
 
-.toggle-btn {
-  display: inline-block;
-  padding: 0.47em 1.5em;
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: #232323;
-  background: #fff;
-  border: 2px solid #dadada;
-  border-radius: 2em;
-  cursor: pointer;
-  box-shadow: 0 2px 12px 0 rgba(30,30,40,0.04);
-  transition:
-    background 0.18s,
-    color 0.18s,
-    border 0.2s,
-    box-shadow 0.2s;
-  outline: none;
-}
-.toggle-btn:focus,
-.toggle-btn:hover {
-  background: #f6f6f9;
-  color: #3182ce;
-  border-color: #c2c2c2;
-  box-shadow: 0 4px 18px 0 rgba(30,100,200,0.07);
-}
-.toggle-btn:active {
-  background: #3182ce;
-  color: #fff;
-  border-color: #3182ce;
+@media (max-width: 768px) {
+  .article-image-wrapper {
+    float: none !important;
+    max-width: 100%;
+    margin: 20px 0 !important;
+  }
 }
 </style>
 </head>
@@ -358,12 +380,13 @@
 
 <!-- Page Content -->
 <div class="page-content">
-		    <div class="language-toggle-section">
-<div style="display: flex; justify-content: flex-end; align-items: flex-start; margin-top: 32px;">
-  <button id="language-toggle-btn" class="toggle-btn">日本語 / English</button>
-</div>
-
-    <div id="section-en" class="lang-section lang-en">
+    <div class="language-toggle-section">
+        <!-- Language toggle button - positioned absolutely -->
+        <div style="position: sticky; top: 20px; z-index: 100; display: flex; justify-content: flex-end; padding: 20px 20px 10px;">
+            <button id="language-toggle-btn" class="toggle-btn">🌐 Switch to 日本語</button>
+        </div>
+        
+        <div id="section-en" class="lang-section lang-en">
     <section class="pbmit-team-single">
         <div class="container">
             <div class="row">
@@ -371,7 +394,7 @@
                     <div class="pbmit-entry-content">
                         <div class="pbmit-heading-subheading animation-style2">
                             <h4 class="pbmit-subtitle">Experience Articles</h4>
-                            <h3 class="pbmit-title">Choosing “India” on Purpose — Discovering Myself as a Japanese through
+                            <h3 class="pbmit-title">Choosing "India" on Purpose — Discovering Myself as a Japanese through
 Research and Daily Life.</h3>
                         </div>
                         <p class="text-justify">In February 2025, Mr. TANABU Tomoya, then about to enter his fourth undergraduate
@@ -380,10 +403,10 @@ Indian Institute of Technology Hyderabad (IITH), conducting IT-related research
 together with IITH graduate students. The experiences he gained in a research
 environment, culture, and daily life so different from Japan significantly transformed his
 values.</p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\TANABU_1.jpg" alt="Ms. Yahagi with other lab members."
        class="img-fluid rounded shadow">
-  <p class="mt-2"><em>With fellow research interns at IITH Prof. Kataoka’s laboratory (Mr. TANABU: second from the right)</em></p>
+  <p class="mt-2"><em>With fellow research interns at IITH Prof. Kataoka's laboratory (Mr. TANABU: second from the right)</em></p>
 </div>
 
                         <h5 class="pbmit-title mt-4 mb-2">“Why India? Why IITH?” — I wanted to see and find out for myself</h5>
@@ -439,7 +462,7 @@ students’ enthusiasm for research and learning. They were already thinking ser
 about how to use their current studies and research at IITH as a foundation to take
 further steps in their careers. He was also impressed by the high number of female students at
 the institute, despite it being a science and engineering university.</p>
-<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\TANABU_2.jpg" alt="With fellow research interns at the Holi festival on campus"
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>With fellow research interns at the Holi festival on campus (Mr. TANABU: the front left)</em></p>
@@ -484,11 +507,11 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
             <div class="col-md-12 col-lg-12 pbmit-teammember-content">
                 <div class="pbmit-entry-content">
 					<div class="pbmit-heading-subheading animation-style2">
-                                                    <h4 class="pbmit-subtitle">体験記事</h4>
-                    <h5 class="pbmit-title mt-4 mb-2">あえて「インド」を選択　——　研究と生活の先で出会った“日本人としての自分”</h5>
-
+                        <h4 class="pbmit-subtitle">体験記事</h4>
+                        <h5 class="pbmit-title mt-4 mb-2">あえて「インド」を選択　——　研究と生活の先で出会った"日本人としての自分"</h5>
+                    </div>
                     <p class="text-justify">2025年2月、東京大学工学部の学部4年生になろうとしていた田名部智也さんは、1か月間にわたりインド工科大学ハイデラバード校（IITH）に滞在し、現地の大学院生と共にIT関連の研究に取り組みました。日本とは大きく異なる研究環境、文化、生活の中で得た学びは、彼の価値観を大きく変えることになります。</p>
-					<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\TANABU_1.jpg" alt="IITH片岡教授研究室にて（右から２番目が田名部さん）"
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>IITH片岡教授研究室にて（右から２番目が田名部さん）</em></p>
@@ -520,7 +543,7 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
                     </p>
 
                     <p class="text-justify">また、キャンパス内でのIITH学生との交流を通して、田名部さんに印象づけられたことは、彼らの研究や学びに対する"熱量"の高さ。IITHでの研究や学びを糧にして、いかにその先、ステップアップしてゆくかを、学生である今から真剣に考えていること。また理工系大学にも関わらず、女子学生が多いこと、でした。</p>
-					<div class="text-center" style="max-width:600px; margin:auto;">
+<div class="article-image-wrapper">
   <img src="images\experience\TANABU_2.jpg" alt="研究インターン生仲間とキャンパス内でのホーリー祭りにて（左前が田名部さん）"
        class="img-fluid rounded shadow">
   <p class="mt-2"><em>研究インターン生仲間とキャンパス内でのホーリー祭りにて（左前が田名部さん）</em></p>
@@ -568,7 +591,7 @@ an irreplaceable experience that you could never gain by staying only in Japan.�
 							<div class="widget pt-0">
 								<h2 class="widget-title">Our address</h2>
 								<div class="pbmit-contact-widget-lines">
-									Japan Desk, Room 304A, Admin Block<br> IIT Hyderabad, India
+									Japan Desk, Room G-002, Admin Building<br> IIT Hyderabad, India
 								</div>
 							</div>
 						</div>			
@@ -713,11 +736,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isEnglish) {
       enSection.style.display = 'none';
       jaSection.style.display = '';
-      btn.textContent = 'English / 日本語';
+      btn.innerHTML = '🌐 Switch to English';
     } else {
       enSection.style.display = '';
       jaSection.style.display = 'none';
-      btn.textContent = '日本語 / English';
+      btn.innerHTML = '🌐 Switch to 日本語';
     }
     isEnglish = !isEnglish;
   });
