@@ -658,7 +658,7 @@
 											 <span class="whats-new-title"><b>What's New</b></span>
 											 <span class="whats-new-title-tag"><b><i>Stay Updated with Our News Section</i></b></span>
 										</div>
-										<div class="card-body">
+										<div class="card-body py-0">
 											<div id="marqueecontainer">
 												<!-- <div class="col-xs-12"> -->
 													<ul class="demo1">
@@ -670,11 +670,20 @@
 														
 														<li><img src="images/New_gif.gif" style="width: 30px;"><a href="jst-lotus.html" target="_blank"> JST LOTUS Programme 2026 Call for Applications Now Open </a> <br><strong><i>13 March 2026</i></strong></li>
 														
-														<li><img src="images/New_gif.gif" style="width: 30px;"><a href="japanese-partner-universities.html" target="_blank"> Japanese Partner Universities & Research Institutes Spotlight: Director Prof. Murty’s February/March 2026 Visit to Japan</a> <br><strong><i>01 March 2026</i></strong></li>
+														<!-- <li><img src="images/New_gif.gif" style="width: 30px;"><a href="japanese-partner-universities.html" target="_blank"> Japanese Partner Universities & Research Institutes Spotlight: Director Prof. Murty’s February/March 2026 Visit to Japan</a> <br><strong><i>01 March 2026</i></strong></li> -->
 														
-														<li><img src="images/New_gif.gif" style="width: 30px;"><a href="kyudai-now-jan-2026.html" target="_blank"> Kyushu University Forum "KYUDAI NOW" (Indian Institute of Technology, Hyderabad) January 2026</a> <br><strong><i>15 January 2026</i></strong></li>
-																												
+														<!-- <li><img src="images/New_gif.gif" style="width: 30px;"><a href="kyudai-now-jan-2026.html" target="_blank"> Kyushu University Forum "KYUDAI NOW" (Indian Institute of Technology, Hyderabad) January 2026</a> <br><strong><i>15 January 2026</i></strong></li> -->
+														<li style="text-align:center; border-bottom:none;">
+															<a href="archive.html" style="font-weight:600; color:#0d6efd;">
+																View Archived News →
+															</a>
+														</li>														
 													</ul>
+													<!-- <div class="text-center mt-3">
+														<a href="archive.html" class="btn btn-sm btn-outline-primary">
+															View Archived News
+														</a>
+													</div> -->
 												<!-- </div> -->
 											</div>
 										</div>
@@ -1159,25 +1168,25 @@
 	<script src="js/jquery.bootstrap.newsbox.js"></script>
     <script src="js/main.js"></script>
 	<script type="text/javascript">
-		$(function () {
-			$(".demo1").bootstrapNews({
-				newsPerPage: 4,
-				autoplay: true,
-				pauseOnHover:true,
-				direction: 'up',
-				newsTickerInterval: 2500,
-				onToDo: function () {
+		// $(function () {
+		// 	$(".demo1").bootstrapNews({
+		// 		newsPerPage: 4,
+		// 		autoplay: true,
+		// 		pauseOnHover:true,
+		// 		direction: 'up',
+		// 		newsTickerInterval: 2500,
+		// 		onToDo: function () {
 
-					// move first item to end = true infinite loop
-					var firstItem = $news.find("li:first");
+		// 			// move first item to end = true infinite loop
+		// 			var firstItem = $news.find("li:first");
 
-					firstItem.fadeOut(300, function () {
-						$(this).appendTo($news).show();
-					});
+		// 			firstItem.fadeOut(300, function () {
+		// 				$(this).appendTo($news).show();
+		// 			});
 
-				}
-			});
-		});
+		// 		}
+		// 	});
+		// });
 		
 		/*$("select.goog-te-combo option[value!='ab']").hide();
       $("select.goog-te-combo option[value!='ab']").css('display','none');*/
