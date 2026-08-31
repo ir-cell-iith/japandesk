@@ -16,6 +16,24 @@
     
 ******************************/
 
+.announcements-menu-item>a {
+    color: #f5c542 !important;
+    font-weight: 700;
+    animation: announcements-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes announcements-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
 /*----------------------------------------*/
 /*  00 - Home
 /*----------------------------------------*/
